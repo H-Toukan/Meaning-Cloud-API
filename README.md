@@ -1,7 +1,6 @@
 # Meaning-Cloud-API
 
 This Bash script allows you to interact with MeaningCloud APIs for Document Structure, Summarization, and Language Identification.
-
 ## Prerequisites
 
 Before using the script, make sure you have the following:
@@ -58,6 +57,10 @@ Before using the script, make sure you have the following:
 
 - Choose API: Language Identification
 - Enter the text when prompted.
+##Tutorial To Edit Your Reporistory
+![MeaningCloud Step1](Images/1.png)
+![MeaningCloud Step3](Images/2.png)
+
 
 ## Author
 Hadeel Toukan
