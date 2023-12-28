@@ -64,3 +64,5 @@ Before using the script, make sure you have the following:
 
 ## Author
 Hadeel Toukan
+
+For more information, visit the [MeaningCloud API Website](https://www.meaningcloud.com/developer/apis).
