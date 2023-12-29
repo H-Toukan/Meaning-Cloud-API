@@ -45,7 +45,8 @@ Before using the script, make sure you have the following:
 - Choose API: Document Structure
 - Choose input type: Text
 - Enter the text when prompted.
-
+  
+![MeaningCloud Step1](Images/DocumentStructure.png)
 ### Summarization
 
 - Choose API: Summarization
@@ -53,10 +54,13 @@ Before using the script, make sure you have the following:
 - Enter the URL when prompted.
 - Enter the number of sentences for the summary.
 
+![MeaningCloud Step1](Images/Summarization.png)
 ### Language Identification
 
 - Choose API: Language Identification
 - Enter the text when prompted.
+
+![MeaningCloud Step1](Images/LanguageDetetction.png)
 ## Tutorial To Edit Your Reporistory
 ![MeaningCloud Step1](Images/Step1.png)
 ![MeaningCloud Step3](Images/Step2.png)
