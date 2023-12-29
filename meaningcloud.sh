@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replace 'YOUR_API_KEY' with your actual MeaningCloud API key
-API_KEY="c205ef26f3a2c9fb798cd3e4c65ca724"
+API_KEY="YOUR_API_KEY"
 
 echo "Choose the API:"
 echo "1. Document Structure"
