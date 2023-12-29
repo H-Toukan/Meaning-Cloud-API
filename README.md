@@ -58,8 +58,8 @@ Before using the script, make sure you have the following:
 - Choose API: Language Identification
 - Enter the text when prompted.
 ## Tutorial To Edit Your Reporistory
-![MeaningCloud Step1](Images/1.png)
-![MeaningCloud Step3](Images/2.png)
+![MeaningCloud Step1](Images/Step1.png)
+![MeaningCloud Step3](Images/Step2.png)
 
 
 ## Author
