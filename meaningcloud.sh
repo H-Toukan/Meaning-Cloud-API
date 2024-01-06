@@ -39,9 +39,13 @@ case "$API_NAME" in
             echo "Invalid input type. Exiting."
             exit 1
         fi
-        eval curl 'https://api.meaningcloud.com/documentstructure-1.0' \
+        RESPONSE=$(eval curl 'https://api.meaningcloud.com/documentstructure-1.0' \
             --form "key=$API_KEY" \
-            $DATA_PARAM
+            $DATA_PARAM)
+        # Extracting structure information
+        STRUCTURE=$(echo "$RESPONSE" | jq -r '.structure')
+        echo "Document Structure Analysis Results:"
+        echo "$STRUCTURE"
         ;;
     "summarization")
         read -p "Choose input type: (1) Text or (2) URL: " INPUT_TYPE
@@ -56,16 +60,26 @@ case "$API_NAME" in
             exit 1
         fi
         read -p "Enter the number of sentences: " NUM_SENTENCES
-        eval curl 'https://api.meaningcloud.com/summarization-1.0' \
+        RESPONSE=$(eval curl 'https://api.meaningcloud.com/summarization-1.0' \
             --form "key=$API_KEY" \
             $DATA_PARAM \
-            --form "sentences=$NUM_SENTENCES"
+            --form "sentences=$NUM_SENTENCES")
+        # Extracting summary information
+        SUMMARY=$(echo "$RESPONSE" | jq -r '.summary')
+        echo "Summary of the Input Document:"
+        echo "$SUMMARY"
         ;;
     "lang-identification")
         read -p "Enter the text: " USER_TEXT
-        eval curl 'https://api.meaningcloud.com/lang-4.0/identification' \
+        RESPONSE=$(eval curl 'https://api.meaningcloud.com/lang-4.0/identification' \
             --form "key=$API_KEY" \
-            --form "txt=$USER_TEXT"
+            --form "txt=$USER_TEXT")
+        # Extracting language information
+        DETECTED_LANGUAGE=$(echo "$RESPONSE" | jq -r '.language_list[0].language')
+        if [ "$DETECTED_LANGUAGE" == "null" ]; then
+            echo "Language detection failed. Please provide more text for accurate detection."
+        else
+            echo "Detected Language: $DETECTED_LANGUAGE"
+        fi
         ;;
 esac
-
