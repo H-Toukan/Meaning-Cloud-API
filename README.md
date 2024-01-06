@@ -12,20 +12,26 @@ Before using the script, make sure you have the following:
 1. Open a terminal.
 
 2. Navigate to the directory where the script is located.
+3. Make sure you have jq installed on your system:
 
-3. Make the script executable if needed:
+    ```bash
+    sudo apt-get install jq
+    ```
+
+
+4. Make the script executable if needed:
 
     ```bash
     chmod +x meaningcloud.sh
     ```
 
-4. Run the script:
+5. Run the script:
 
     ```bash
     ./meaningcloud.sh
     ```
 
-5. Follow the on-screen prompts to choose the API and provide necessary input.
+6. Follow the on-screen prompts to choose the API and provide necessary input.
 
 ## API Options
 
